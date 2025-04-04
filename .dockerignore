@@ -1,6 +1,27 @@
+# Ignore dependencies (to force fresh install inside Docker)
 node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore unnecessary build artifacts
+dist
+build
+
+# Ignore local environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Ignore version control and editor settings
 .git
-Dockerfile
-docker-compose.yml
-build.sh
-deploy.sh
+.gitignore
+.vscode
+.idea
+*.swp
+.DS_Store
+Thumbs.db
+
+# Do NOT ignore these (needed inside Docker)
+!package.json
+!package-lock.json
