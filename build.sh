@@ -4,7 +4,7 @@
 IMAGE_NAME="mukundhan20/second-app"
 
 # Build the Docker image
-docker build -t $IMAGE_NAME:latest .
+docker build -t mukundhan20/second-app:latest ./build
 
 # Tag the image for the dev repository
 docker tag $IMAGE_NAME:latest $IMAGE_NAME:dev
