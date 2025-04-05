@@ -1,27 +1,20 @@
-# Ignore dependencies (to force fresh install inside Docker)
+# Exclude node_modules and local-only files
 node_modules
-npm-debug.log
-yarn-error.log
-
-# Ignore unnecessary build artifacts
-dist
-build
-
-# Ignore local environment files
-.env
-.env.local
-.env.production
-.env.development
-
-# Ignore version control and editor settings
 .git
-.gitignore
 .vscode
 .idea
-*.swp
+*.log
 .DS_Store
-Thumbs.db
 
-# Do NOT ignore these (needed inside Docker)
+# Exclude scripts (optional)
+build.sh
+deploy.sh
+
+# Exclude output
+build
+dist
+
+# 👇 DO NOT ignore these!
 !package.json
 !package-lock.json
+
