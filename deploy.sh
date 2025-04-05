@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Define image name (without spaces)
+# Define image name
 IMAGE_NAME="mukundhan20/second-app"
 
 # Pull the latest image from the dev repository
@@ -12,4 +12,6 @@ docker rm app || true
 
 # Run the new container
 docker run -d --name app -p 80:80 $IMAGE_NAME:dev
+
+
 
