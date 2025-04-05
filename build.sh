@@ -1,8 +1,13 @@
 #!/bin/bash
-IMAGE_NAME="mukundhan20/devops-app"
-TAG="latest"
 
-echo "Building Docker Image..."
-docker build -t $IMAGE_NAME:$TAG .
+# Define image name (without spaces)
+IMAGE_NAME="mukundhan20/second-app"
 
-echo "Build Complete."
+# Build the Docker image
+docker build -t $IMAGE_NAME:latest .
+
+# Tag the image for the dev repository
+docker tag $IMAGE_NAME:latest $IMAGE_NAME:dev
+
+# Push the image to Docker Hub
+docker push $IMAGE_NAME:dev
